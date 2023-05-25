@@ -1,0 +1,155 @@
+/* Esta regla aplica a todo el cuerpo del documento. Establece el tipo de fuente del documento a Arial, si está disponible, o a una fuente sans-serif genérica si no lo está */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* La clase .input-group se aplica a los grupos de entrada, que contienen un label, un input y un span para el mensaje de error.
+   La regla establece un margen inferior de 1em (equivalente al tamaño de la fuente actual) para separar visualmente los grupos de entrada entre sí */
+.input-group {
+    margin-bottom: 1em;
+}
+
+/* Esta regla se aplica a los elementos label dentro de los grupos de entrada.
+   Establece que los labels se muestren en su propia línea (block) y que el texto esté en negrita (bold) */
+.input-group label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Esta regla se aplica a los divs dentro de los grupos de entrada.
+   Establece que los elementos hijos del div (el input y el span) se muestren en línea (flex) y que estén alineados verticalmente (align-items: baseline) */
+.input-group div {
+    display: flex;
+    align-items: baseline;
+}
+
+/* Esta regla se aplica a los elementos input dentro de los grupos de entrada.
+   Establece un margen a la derecha de 1em para separar visualmente el input del mensaje de error */
+.input-group input {
+    margin-right: 1em;
+}
+
+/* Esta regla se aplica a los elementos con la clase .asterisk.
+   Establece el color del texto a rojo */
+.asterisk {
+    color: red;
+}
+
+/* Esta regla se aplica al botón de agregar y limpiar. 
+   Establece el color de fondo a un tono de azul (#0056b3), el color del texto a blanco, quita el borde, 
+   agrega padding y cambia el cursor a una mano cuando se pasa por encima */
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*
+- Con display: flex;, los elementos hijos del contenedor .button-group (es decir, los botones) 
+se colocarán en una línea.
+- gap: 10px; es usado para dar un espacio entre los botones. Ajustar estos valores según se requiera.
+*/
+.button-group {
+    display: flex;
+    /* Espacio entre los botones. Ajusta el valor según tus necesidades */
+    gap: 5px;
+
+}
+
+/* Esta regla se aplica a los elementos con la clase .error.
+   Establece el color del texto a rojo */
+.error {
+    color: red;
+}
+
+/* Estilos para la tabla */
+/*
+Explicación de las reglas CSS de la tabla:
+- border-collapse: collapse;: Esta propiedad hace que los bordes de las celdas se colapsen en un solo borde, 
+en lugar de tener cada celda con su propio borde separado.
+- width: 25%;: Hace que la tabla ocupe un 25% del ancho disponible de su contenedor.
+- margin-top: 20px;: Esto agrega un margen superior de 20 píxeles a la tabla, 
+creando un espacio entre ella y cualquier elemento que esté directamente encima de ella (en este caso, el botón "Agregar").
+- border: 1px solid #dddddd;: Aplica un borde a las celdas de la tabla.
+- text-align: left;: Alinea el texto a la izquierda en las celdas de la tabla.
+- padding: 8px;: Aplica un relleno dentro de las celdas de la tabla. (Ver "../docs/padding.md")
+background-color: #f2f2f2;: Aplica un color de fondo a las celdas de encabezado de la tabla.
+*/
+#lista {
+    border-collapse: collapse;
+    width: 25%;
+    margin-top: 20px;
+    /* te aseguras de que el ancho total (incluyendo padding y bordes) nunca exceda el 25% que estableciste en width.*/
+    box-sizing: border-box;
+}
+
+#lista th,
+#lista td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#lista th {
+    background-color: #f2f2f2;
+}
+
+
+#total {
+    /* Establece un borde sólido de color gris claro alrededor del elemento */
+    border: 1px solid #ccc;
+
+    /* Aplica un relleno de 10px dentro del elemento para darle un poco de espacio */
+    padding: 10px;
+
+    /* Cambia el color del texto a Negro */
+    color: black;
+
+    /* Establece el color de fondo del elemento a gris claro */
+    background-color: #f2f2f2;
+
+    /* Ajusta el ancho del elemento para que se ajuste al contenido que contiene */
+    width: 25%;
+
+    /* Añade un margen superior de 20px para darle un poco de espacio entre este elemento y el que está arriba */
+    margin-top: 20px;
+
+    /* te aseguras de que el ancho total (incluyendo padding y bordes) nunca exceda el 25% que estableciste en width.*/
+    box-sizing: border-box;
+}
+
+#totalValue {
+    /* Ajusta este valor según cuánto espacio desees */
+    margin-left: 70px;
+
+    /* Cambia el color del texto a azul */
+    color: #0056b3;
+
+}
+
+#titulo {
+    text-align: center;
+
+    /* Establece un borde sólido de color gris claro alrededor del elemento */
+    border: 1px solid #ccc;
+
+    /* Aplica un relleno de 10px dentro del elemento para darle un poco de espacio */
+    padding: 10px;
+
+    /* Cambia el color del texto a azul */
+    color: black;
+
+    /* Establece el color de fondo del elemento a gris claro */
+    background-color: #f2f2f2;
+
+    /* Ajusta el ancho del elemento para que se ajuste al contenido que contiene */
+    width: 25%;
+
+    /* Añade un margen superior de 20px para darle un poco de espacio entre este elemento y el que está arriba */
+    margin-top: 20px;
+
+    /* te aseguras de que el ancho total (incluyendo padding y bordes) nunca exceda el 25% que estableciste en width.*/
+    box-sizing: border-box;
+}

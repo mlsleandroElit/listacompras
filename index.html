@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Esta línea establece la codificación de caracteres del documento a UTF-8, 
+        que incluye la mayoría de los caracteres de los lenguajes humanos 
+        y permite que el texto se vea correctamente en cualquier navegador -->
+    <meta charset="UTF-8">
+
+    <!-- Esta línea se usa para decirle a Internet Explorer (versión 8 y superior) 
+        que use su motor de renderizado más reciente -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Esta línea establece las propiedades de la ventana gráfica para dispositivos móviles. 
+        Esto ayuda a asegurar que el documento sea escalable 
+        y tenga la misma apariencia en todos los dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de compras</title>
+
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+
+    <script src="./assets/js/compras.js" defer></script>
+</head>
+
+<body>
+    <h1 id="titulo">Lista de compras</h1>
+    <!-- Inicio del grupo de entrada para el nombre del artículo -->
+    <div class="input-group">
+        <!-- Etiqueta para el campo de entrada del nombre del artículo. 
+            El atributo 'for' se refiere al id del campo de entrada correspondiente -->
+        <label for="nombreItem">Artículo
+            <!-- El asterisco en rojo indica que este campo es obligatorio -->
+            <span class="asterisk">*</span>
+        </label>
+        <!-- Un contenedor para el campo de entrada y el mensaje de error, que se mostrarán en la misma línea -->
+        <div>
+            <!-- Campo de entrada para el nombre del artículo. 
+                El atributo 'required' indica que este campo debe ser llenado -->
+            <input type="text" id="nombreItem" required />
+            <!-- Este elemento mostrará el mensaje de error 
+                si el nombre del artículo no se introduce correctamente -->
+            <span id="nombreError" class="error"></span>
+        </div>
+    </div> <!-- Fin del grupo de entrada para el nombre del artículo -->
+
+    <!-- Inicio del grupo de entrada para el precio del artículo -->
+    <div class="input-group">
+        <!-- Etiqueta para el campo de entrada del precio del artículo -->
+        <label for="precioItem">Precio
+            <!-- El asterisco en rojo indica que este campo es obligatorio -->
+            <span class="asterisk">*</span></label>
+
+        <!-- Un contenedor para el campo de entrada y el mensaje de error, que se mostrarán en la misma línea -->
+        <div>
+            <!-- Campo de entrada para el precio del artículo. 
+                El atributo 'required' indica que este campo debe ser llenado. 
+                El atributo 'min' establece el valor mínimo permitido para este campo a 0 -->
+            <input type="number" id="precioItem" min="0" required />
+
+            <!-- Este elemento mostrará el mensaje de error 
+                si el precio del artículo no se introduce correctamente -->
+            <span id="precioError" class="error"></span>
+        </div>
+    </div> <!-- Fin del grupo de entrada para el precio del artículo -->
+
+    <!-- Grupo de botones -->
+    <div class="button-group">
+        <!-- Botón que, cuando se hace clic, llamará a la función JavaScript 'agregarItem()' -->
+        <button type="button" onclick="agregarItem()">Agregar</button>
+
+        <!-- Botón que, cuando se hace clic, llamará a la función JavaScript 'limpiarItems()' -->
+        <button type="button" onclick="limpiarItems()">Limpiar</button>
+    </div>
+
+    <!-- Tabla que contendrá los elementos de la lista de compras -->
+    <table id="lista">
+        <thead>
+            <tr>
+                <th>Artículos</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+    <!-- Este elemento mostrará el total acumulativo de los precios de los artículos en la lista de compras -->
+    <h2 id="total">Total <span id="totalValue">$0.00</span></h2>
+
+
+</body>
+
+</html>
